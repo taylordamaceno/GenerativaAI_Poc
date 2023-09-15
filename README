@@ -1,0 +1,23 @@
+Script usando api GPT3 analisará um demonstrativo financeiro de uma empresa criando um relatório com sugestões de melhoria. 
+
+Dependências:
+pip install json
+pip install openai
+
+
+
+Estrutura do script:
+
+
+# Carregar os dados financeiros do arquivo JSON
+
+# Converter os dados financeiros para uma string formatada
+
+# Configurar a chave da API
+
+# Fazer a chamada à API para gerar um resumo executivo
+
+# gerando o relatório e gravando no arquivo resumoexecutivo.txt
+with open("resumoexecutivo.txt", "w") as f:
+    f.write(response.choices[0].text.strip())
+
