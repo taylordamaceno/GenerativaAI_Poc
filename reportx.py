@@ -8,8 +8,13 @@ with open("financeirorelatorio.json", "r") as f:
 # Converter os dados financeiros para uma string formatada
 financial_data_str = "\n".join([f"{key}: {value}" for key, value in financial_data.items()])
 
+# Obter a chave da API do vault
+with open("vault.json", "r") as f:
+    data = json.load(f)
+    api_key = data["api_key"]
+
 # Configurar a chave da API
-openai.api_key = "your app key"
+openai.api_key = api_key
 
 # Fazer a chamada à API para gerar um resumo executivo
 response = openai.Completion.create(
