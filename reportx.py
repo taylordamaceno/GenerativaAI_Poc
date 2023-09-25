@@ -19,7 +19,7 @@ openai.api_key = api_key
 # Fazer a chamada à API para gerar um resumo executivo
 response = openai.Completion.create(
   engine="text-davinci-002",
-  prompt=f"crie um relatório financeiro em forma de texto na linguua portuguesa(br)  que análise de forma critica e propositiva os numeros que estou disponibilizando propondo algumas acoes para melhoria  based on the following financial data:\n{financial_data_str}",
+  prompt=f"crie um relatório financeiro em forma de texto na lingua portuguesa(br)  que análise de forma critica e propositiva os numeros que estou disponibilizando propondo algumas acoes para melhoria  based on the following financial data:\n{financial_data_str}",
   max_tokens=3000
 )
 
